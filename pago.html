@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago con tarjeta de crédito</title>
+    <link rel="stylesheet" href="pago.css">
+    <script src="pago.js"></script>
+    
+</head>
+<body>
+    <div class="form-container">
+        <h1>Pago con Tarjeta de Crédito</h1>
+        <form id="payment-form">
+            <div id="card-element">
+                <!-- Elemento de tarjeta de Stripe -->
+            </div>
+            <button class="button" type="submit">Pagar</button>
+            <div id="card-errors" role="alert"></div>
+        </form>
+    </div>
+
+    <script>
+        // Clave pública de Stripe
+        const stripe = Stripe('tu_clave_publica_de_stripe'); // Sustituir con tu clave pública de Stripe
+        const elements = stripe.elements();
+        const card = elements.create('card');
+        card.mount('#card-element');
+
+        const form = document.getElementById('payment-form');
+
+        // Manejar el envío del formulario
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const { token, error } = await stripe.createToken(card);
+
+            if (error) {
+                // Mostrar errores en el formulario
+                const errorElement = document.getElementById('card-errors');
+                errorElement.textContent = error.message;
+            } else {
+                // Aquí es donde se envía el token al servidor
+                // En una implementación real, este paso debería ser manejado por un servidor.
+                alert(`Token generado: ${token.id}`);
+                // Aquí enviarías el token al servidor para realizar el cobro
+            }
+        });
+    </script>
+</body>
+</html>

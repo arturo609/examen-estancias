@@ -1,0 +1,154 @@
+/* Estilo general para el body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/OIP.jpeg);
+    background-size: cover;    /* hace que la imagen cubra toda la pantalla */
+
+}
+
+/* Contenedor principal */
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #c82222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los botones de registro e inicio de sesión */
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.auth-buttons button {
+    background-color: #3c7ae5;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #45a049;
+}
+
+.auth-buttons button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo para el título */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los contenedores pequeños */
+.small-containers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Contenedor pequeño */
+.small-container {
+    flex: 1 1 30%;
+    background-color: rgb(196, 186, 54);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Estilo específico para el contenedor a la derecha */
+.right-container {
+    flex: 1 1 30%; /* Esto asegura que ocupe el 30% del ancho */
+    background-color: rgb(194, 238, 146);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Añadir bordes a los elementos dentro de los contenedores */
+.titlo {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo para el contenido dentro de los contenedores adicionales */
+.right-container p {
+    font-size: 1rem;
+    color: #333;
+}
+.pedido{
+    flex: 1 1 30%; /* Esto asegura que ocupe el 30% del ancho */
+    background-color: rgb(239, 210, 25);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    /* border: solid  #dcdf9ca3; */        /*borde*/
+    /* top: 50px; */      /* Mueve 50px desde la parte superior */
+    /* left: 100px;   */
+    font-size: 40px;
+    text-align: center;
+    align-items: flex-end;
+    direction: none;
+    height: 119px;
+}
+.hacer-pedido{
+    flex: 1 1 30%;
+    background-color: rgb(196, 186, 54);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.caja-texto {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* Ancho de la caja de texto */
+    transition: border-color 0.3s ease;
+}
+
+.caja-texto:focus {
+    border-color: #4CAF50; /* Cambia el borde cuando está en foco */
+}
+
+.pagar{
+    background-color: #3c7ae5;
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+    border: solid .5rem rgba(252, 255, 45, 0.69);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.pagar{
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-line: none;
+    text-decoration-skip-ink: none;
+}
